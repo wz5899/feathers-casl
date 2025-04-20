@@ -267,6 +267,7 @@ const handleMulti = async <H extends HookContext = HookContext>(
       const data = _pick(context.data, fields)
       context.data = data
     }
+    checkData(context, ability, modelName, context.data, options);
   }
 
   const query = mergeQueryFromAbility(
